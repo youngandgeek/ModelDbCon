@@ -7,12 +7,19 @@ namespace ModelDbCon.Controllers
 {
     public class DeptController : Controller
     {
+<<<<<<< HEAD
         DbConClass context = new DbConClass();
 
+=======
+>>>>>>> 44fc04c9f338df2b74800cb9597a2b7068ade73c
         //index-> getAll Departments method 
         public IActionResult Index()
         {
             //refrence to dbConClass 
+<<<<<<< HEAD
+=======
+            DbConClass context = new DbConClass();
+>>>>>>> 44fc04c9f338df2b74800cb9597a2b7068ade73c
             
             //return the db set values into a list
 
@@ -21,6 +28,7 @@ namespace ModelDbCon.Controllers
             //pass the viewName and  the list to the  
             return View("dept",deptsModel);
         }
+<<<<<<< HEAD
 
         //return specific department detail, pass the id and check with FirstOrDefault the first match to this Id-> return it
         public IActionResult Detail(int id) {
@@ -58,4 +66,7 @@ namespace ModelDbCon.Controllers
                 //return RedirectToAction("DEatils", new{ id=dept.Id});
             }
         }
+=======
+    }
+>>>>>>> 44fc04c9f338df2b74800cb9597a2b7068ade73c
 }

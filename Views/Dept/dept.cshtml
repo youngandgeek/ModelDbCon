@@ -1,11 +1,14 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+<<<<<<< HEAD
 
 <!--it'll show the title of the table-->
 @{
     ViewData["Title"] = "Departments";
 }
+=======
+>>>>>>> 44fc04c9f338df2b74800cb9597a2b7068ade73c
 <!--return the list from the controller in a table-->
 <!--strong type view meaning we specified the model type-->
 @model List<Department>
@@ -20,8 +23,11 @@
         <tr>
             <td>@item.Name</td>
             <td>@item.ManagerName</td>
+<<<<<<< HEAD
 
             <td><a href="/Dept/detail/@item.Id">Deatil</a></td>
+=======
+>>>>>>> 44fc04c9f338df2b74800cb9597a2b7068ade73c
         </tr>
     }
 </table>
