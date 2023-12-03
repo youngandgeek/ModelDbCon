@@ -1,0 +1,25 @@
+﻿
+@model List<Instructor>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Instructor Name</th>
+       <th> Image</th>
+        <th> Dept_id</th>
+        <th> course_id</th>
+
+
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Image</td>
+            <td>@item.dept_id</td>
+            <td>@item.course_id</td>
+
+        </tr>
+    }
+</table>
