@@ -150,34 +150,6 @@ namespace ModelDbCon.Migrations
                     b.ToTable("Student");
                 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            modelBuilder.Entity("ModelDbCon.Models.Course", b =>
-                {
-                    b.HasOne("ModelDbCon.Models.Department", "dept")
-                        .WithMany()
-                        .HasForeignKey("deptId");
-
-                    b.Navigation("dept");
-                });
-
-            modelBuilder.Entity("ModelDbCon.Models.Instructor", b =>
-                {
-                    b.HasOne("ModelDbCon.Models.Course", "crs")
-                        .WithMany()
-                        .HasForeignKey("crsId");
-
-                    b.HasOne("ModelDbCon.Models.Department", "dept")
-                        .WithMany()
-                        .HasForeignKey("deptId");
-
-                    b.Navigation("crs");
-
-                    b.Navigation("dept");
-                });
-
-=======
->>>>>>> 44fc04c9f338df2b74800cb9597a2b7068ade73c
 =======
 >>>>>>> e3789e6ace9ab11a19b7d47e80b46bae6b3e7efc
             modelBuilder.Entity("ModelDbCon.Models.Student", b =>

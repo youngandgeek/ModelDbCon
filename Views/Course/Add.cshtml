@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Course
+@{
+   ViewBag.Title= "Add New Course";
+}
+
+<h>Add new course</h>
+
+<!--action-> go to course controller->SaveCrs action method-->
+
+<form method="post" action="/Course/SaveCrs">
+
+    <div class="form-group">
+
+        <label for="Name"> Name:</label>
+        <!--this name attr have to match whats in the domain model and controller property-->
+        <input type="text" class="form-control" name="Name">
+    </div>
+    <div class="form-group">
+        <label for="Degree">Degree:</label>
+        <input type="text" class="form-control" name="Degree">
+    </div>
+    <div class="form-group">
+        <label for="Minimum Degree">Minimum Degree:</label>
+        <input type="text" class="form-control" name="MinDegree">
+    </div>
+    <!--to select which department this course belongs to-->
+    <div class="form-group">
+        <label for="dept_id ">Dept Id:</label>
+        <input type="text" class="form-control" name="dept_id" value="@Model.dept_id">
+       //name dept_id from course model class
+        <select name="dept_id" class="form-control">
+            @foreach(var item in ViewBag.Depts)
+            {
+                <!--check if its the right Id-->
+                if(item.Id==Model.dept_id){
+
+                <!--item.property from department class-->
+                <!--pass between the option the value you want to show-->
+                    
+                <option value="@item.Id" selected="selected">@item.Name</option>
+                
+                }
+                
+                else
+                {
+                    <option value="@item.Id">@item.Name</option>
+
+                }
+                }
+        </select>
+    </div>
+
+    <input type="submit" class="btn btn-default" value="Add Course">
+
+</form>

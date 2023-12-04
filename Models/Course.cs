@@ -12,7 +12,7 @@ namespace ModelDbCon.Models
 
         [ForeignKey("Department")]
         public int dept_id { get; set; }
-        public string DeptName { get; set; }
+       // public string DeptName { get; set; }
 
         public Department dept { get; set; }
     }
