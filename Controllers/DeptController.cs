@@ -15,9 +15,6 @@ namespace ModelDbCon.Controllers
         {
             //refrence to dbConClass 
 
-            DbConClass context = new DbConClass();
-
-            DbConClass context = new DbConClass();
             
             //return the db set values into a list
 
@@ -46,6 +43,7 @@ namespace ModelDbCon.Controllers
 
         //<form method="post">
         [HttpPost]
+        //pass the obj from department domain model class to save the received data into the domain model class data(insted of string Name ,string ManagerName)
         public IActionResult SaveDept(Department dept)
         {
 
@@ -64,6 +62,3 @@ namespace ModelDbCon.Controllers
             }
         }
     }
-
-    }
-}
