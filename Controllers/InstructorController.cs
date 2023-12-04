@@ -21,5 +21,7 @@ namespace ModelDbCon.Controllers
             return View("Instrut", instructorModel);
 
         }
+
+
     }
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ModelDbCon.Models;
 
 namespace ModelDbCon.Migrations
 {
     [DbContext(typeof(DbConClass))]
-    partial class DbConClassModelSnapshot : ModelSnapshot
+    [Migration("20231204002950_course")]
+    partial class course
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,7 +40,7 @@ namespace ModelDbCon.Migrations
                     b.Property<int?>("deptId")
                         .HasColumnType("int");
 
-                    b.Property<int>("dept_Id")
+                    b.Property<int>("dept_id")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
